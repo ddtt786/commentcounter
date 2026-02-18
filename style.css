@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1px;
+  height: 60%;
+  background: #e0e0e0;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.counter-card {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+.gap-indicator {
+  width: 2px;
+  height: 80px;
+  background: #f0f0f0;
+  margin: 0 20px;
+}
+
+.gap-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 40px;
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  padding: 30px 20px;
+}
+
+.gap-value {
+  font-size: 28px;
+  font-weight: 400;
+  color: #999;
+  text-align: center;
+  min-width: 60px;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 400;
+  color: #666;
+  letter-spacing: 0.5px;
+}
+
+.number {
+  font-size: 72px;
+  font-weight: 300;
+  color: #000;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  min-width: 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.badge-1st {
+  background: #ffd700;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.badge-2nd {
+  background: #c0c0c0;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.badge-tossup {
+  background: #999999;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
