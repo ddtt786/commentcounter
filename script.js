@@ -7,9 +7,13 @@ const label2 = document.querySelector('#label2')
 const badge1 = document.querySelector('#badge1')
 const badge2 = document.querySelector('#badge2')
 const gapValue = document.querySelector('#gapValue')
+const card1 = document.querySelector('#card1')
+const card2 = document.querySelector('#card2')
 
 let count1 = 0
 let count2 = 0
+let postId1 = null
+let postId2 = null
 
 async function fetchPostData() {
   try {
@@ -26,6 +30,8 @@ async function fetchPostData() {
 
       count1 = post1.commentsLength
       count2 = post2.commentsLength
+      postId1 = post1.id
+      postId2 = post2.id
 
       flow1.update(count1)
       flow2.update(count2)
@@ -61,6 +67,17 @@ function updateGap() {
   const gap = Math.abs(count1 - count2)
   gapValue.update(gap)
 }
+
+function openPost(postId) {
+  if (postId) {
+    const url = `https://playentry.org/community/entrystory/${postId}`
+    window.open(url, '_blank')
+  }
+}
+
+// 카드 클릭 이벤트
+card1.addEventListener('click', () => openPost(postId1))
+card2.addEventListener('click', () => openPost(postId2))
 
 fetchPostData()
 

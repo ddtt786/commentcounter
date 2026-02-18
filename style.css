@@ -45,6 +45,12 @@ body {
   width: 40%;
   height: 100%;
   position: relative;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.counter-card:hover {
+  opacity: 0.8;
 }
 
 .gap-indicator {
