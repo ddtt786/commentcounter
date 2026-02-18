@@ -115,3 +115,43 @@ body {
   color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .container::before {
+    left: 50%;
+    top: 50%;
+    width: 60%;
+    height: 1px;
+    transform: translate(-50%, -50%);
+  }
+
+  .counter-card {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .gap-display {
+    margin: 30px 0;
+    padding: 20px 0;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .number {
+    font-size: 48px;
+  }
+
+  .gap-value {
+    font-size: 24px;
+  }
+}
